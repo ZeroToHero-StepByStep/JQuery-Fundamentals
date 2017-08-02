@@ -2,30 +2,104 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="~/Scripts/jquery-1.10.2.intellisense.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery-1.10.2.js" type="text/javascript"></script>
+    <style type="text/css">
+        .BlueDiv {
+            background-color: Navy;
+            color: White;
+            width: 200px;
+        }
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+        .RedDiv {
+            background-color: Red;
+            color: White;
+            width: 200px;
+        }
+        .style1 { width: 100%; }
+    </style>
+    
+
+</head>
+
+<body>
+<div id="TestDiv" title="Div Title asdf asdfsdf asdf">
+    This is my div text
 </div>
+<div title="Contains Table">
+    <table id="DataTable">
+        <tr>
+            <td>Cell 1 Row 1</td>
+        </tr>
+        <tr>
+            <td>Cell 1 Row 2</td>
+        </tr>
+        <tr>
+            <td>Cell 1 Row 3</td>
+        </tr>
+        <tr>
+            <td>
+                <table style="width: 100%">
+                    <tr>
+                        <td>Nested Table Cell and Row</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <br/>
+</div>
+<div class="BlueDiv">
+    <span>Blue div</span>
+</div>
+<br/>
+<span class="BlueDiv">This is my blue span</span>
+<br/>
+<div class="RedDiv">
+    <span>Red div</span>
+</div>
+<p>
+    <img src="~/Images/pluralsight.jpg"/>
+</p>
+
+<form id="form1" runat="server">
+    <table style="width: 300px;">
+        <tr>
+            <td style="width: 30%;">First Name</td>
+            <td style="width: 70%;">
+                <input id="FirstNameTextBox" value="John" type="text"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td>
+                <input id="LastNameTextBox" type="text"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Comments</td>
+            <td>
+                <textarea rows="5" cols="60" id="CommentsTextBox">TextArea</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select id="sel">
+                    <option value="AZ">AZ</option>
+                    <option value="CA">CA</option>
+                </select>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                <input id="SubmitButton" type="button" value="Submit"/>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+
+</form>
+</body>
