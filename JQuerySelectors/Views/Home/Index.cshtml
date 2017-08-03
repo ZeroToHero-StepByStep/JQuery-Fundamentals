@@ -21,49 +21,44 @@
     </style>
     <script type="text/javascript">
 
+//example 1:      :contains
+//        $(document).ready(function() {
+//            alert($('div:contains("my div")').html());
+//        });
 
+//example 2：    odd or even 
+//        $(document).ready(function() {
+//            $('tr:odd').css('background-color', 'yellow');
+//        });  
+
+//example 3:     first child of each tr there 
+//        $(document).ready(function() {
+//            $('tr:first-child').css('background-color', 'red');
+//        }); 
+ 
+//example 4:    use id to be more specific         
+//        $(document).ready(function () {
+//            $('#DataTable tr:first-child').css('background-color', 'purple');
+//        });
+
+//example 5:    end with $= , start with ^= (carrot symbol) , contains *= 
+//        $(document).ready(function() {
+//            alert($('div[title *="Title"]').html());
+//        });
+
+
+//example 6:
         $(document).ready(function() {
-//example 1 :
-//            var inputs = $(':input');
-//            alert(typeof inputs[1]);
-//            alert($(inputs[0]).val());
-
-            //example 2 : iterate all input colon elements 
-//            $(':input').each(function() {
-//                var elm = $(this); //this is wrapped in a jQuery wrapper 
-//                alert(elm.val());
-
-//example 3:assign value , directly 
-//            $(':input').each(function () {
-//                var elm = $(this); //this is wrapped in a jQuery wrapper 
-//                alert(elm.val('foo'));
-//            }); 
-
-//example 4: find all the input tag under the form tag 
-//            $('form input').each(function() {
-//                var elm = $(this); //this is wrapped in a jQuery wrapper 
-//                alert(elm.val());
-//            });
-
-//example 5: find all the colon input selector under the form tag 
-//            $('form :input').each(function () {
-//                var elm = $(this); //this is wrapped in a jQuery wrapper 
-//                alert(elm.val());
-//            });
-
-//example 6: a more efficient way to find the colon input selector under the form with id  
-            $('#form1 :input').each(function () {
-                var elm = $(this); //this is wrapped in a jQuery wrapper 
-                alert(elm.val());
-            });
-
+            $('div[title *="Title"]').html('update div value due to title');
         });
+
+     
     </script>
     
 </head>
 
 <body>
-<div id="TestDiv" title="Div Title asdf asdfsdf asdf">
+<div id="TestDiv" title="Div Title  asdf asdf">
     This is my div text
 </div>
 <div title="Contains Table">
