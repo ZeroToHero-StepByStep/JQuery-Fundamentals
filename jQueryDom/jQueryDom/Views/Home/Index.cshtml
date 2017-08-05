@@ -21,22 +21,26 @@
     <script src="~/Scripts/jquery-1.10.2.js" type="text/javascript"></script>
     <script type="text/javascript">
 
-        $(document).ready(function () {
-//example 1         :update data 
-//            var output = $('#OutputDiv');
-//            $('div.BlueDiv , div.RedDiv').each(function(index) {
-//                output.html(output.html() + "<br/>" + index + " " + $(this).text());
-//            });
+        $(document).ready(function() {
+            //example 1             :modify the DOM
+            var tcd = $('#TableContainerDiv');
+            tcd.append('<span style="background-color:green"> Appended Child 1 </span>');
+            tcd.prepend('<br/><span style="background-color:green"> Prepended Child 1 </span>');
+            $('<br/> <span style="background-color:green"> Appended Child 2 </span>').appendTo(tcd);
+            $('<span style="background-color:green"> Prepended Child 2 </span>').prependTo(tcd);
 
-            //example 2:    a better way cause example 1 update the DOM every time
-            var html = ''; 
-            $('div.BlueDiv , div.RedDiv').each(function (index) {
-                html +=  "<br/>" + index + " " + $(this).text();
+            //example 2             :Wrap 
+            $('span.Foo').wrap('<div class="RedDiv ParentWrapper"/>');
+            $('div.ParentWrapper').each(function() {
+                alert($(this).html());
             });
-            var output = $('#OutputDiv');
-            output.html(html);
 
-        })
+
+            //example 3             :remove notes 
+            $('div.ParentWrapper').remove();
+
+
+        });
     </script>
 </head>
 <body>
