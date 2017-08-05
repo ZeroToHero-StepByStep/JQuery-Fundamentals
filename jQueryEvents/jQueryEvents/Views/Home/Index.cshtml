@@ -24,7 +24,9 @@
 
         function WireEvents() {
             $('#SubmitButton').click(function() {
-                alert('Click Button');
+                var firstName = $('#FirstNameTextBox').val();
+                var lastName = $('#LastNameTextBox').val();
+                $('#DivOutput').text(firstName + " " + lastName);
             });
         }
     </script>
