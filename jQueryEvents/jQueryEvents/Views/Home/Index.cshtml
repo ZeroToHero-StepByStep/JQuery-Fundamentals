@@ -19,8 +19,14 @@
     <script src="~/Scripts/jquery-1.10.2.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-
+            WireEvents();
         });
+
+        function WireEvents() {
+            $('#SubmitButton').click(function() {
+                alert('Click Button');
+            });
+        }
     </script>
 </head>
 <body>
