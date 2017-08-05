@@ -28,6 +28,11 @@
                 var lastName = $('#LastNameTextBox').val();
                 $('#DivOutput').text(firstName + " " + lastName);
             });
+
+            //Handle select 
+            $('#StatesSelect').change(function() {
+                alert($(this).val());
+            });
         }
     </script>
 </head>
