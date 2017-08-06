@@ -5,7 +5,14 @@
     <script src="../Scripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-          
+            $('#MyButton').click(function() {
+                $.post('../GetCustomers.aspx',
+                    { PageSize: 15 },
+                    function(data) {
+                        $('#OutputDiv').html(data);
+                    });
+
+            });
         });
     </script>
 </head>
