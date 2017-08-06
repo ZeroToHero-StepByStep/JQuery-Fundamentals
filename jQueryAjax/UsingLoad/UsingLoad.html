@@ -5,7 +5,10 @@
     <script src="../Scripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-          
+            $('#MyButton').click(function() {
+                //load HTML from HelpDetails.html 
+                $('#OutputDiv').load('../HelpDetails.html');
+            });
         });
     </script>
 </head>
