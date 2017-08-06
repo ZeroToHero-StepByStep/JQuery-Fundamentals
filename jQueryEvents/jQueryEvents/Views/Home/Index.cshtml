@@ -23,22 +23,18 @@
         });
 
         function WireEvents() {
-            $('#MyDiv , tr').mouseenter(function() {
-                Toggle(this);
-                //change the cursor
-                $(this).css('cursor', 'pointer');
-            }).mouseleave(function() {
-                Toggle(this);
-            }).mouseup(function (e) {
-                alert($(e.target).attr('id'));
-                $(this).text('x:' + e.pageX + " y:"+e.pageY) ; 
-            });
-
-
-            function Toggle(div) {
-                $(div).toggleClass('Highlight');
-            }
-
+            $('#MyDiv').on(' mouseenter mouseleave mouseup',
+                function(e) {
+                    $(this).toggleClass('Highlight');
+//                    if (e.type == 'mouseenter') {
+                        $(this).css('cursor', 'pointer');
+//                    }
+                    if (e.type == 'mouseup') {
+                        $(this).text(' X: ' + e.pageX + "   Y:" + e.pageY);
+                    }
+                });
+//            $('#MyDiv').off(' mouseup') ; only turn off mouseup binding 
+//            $('#MyDiv').off(); will turn off all the on binding before  
         }
     </script>
 </head>
