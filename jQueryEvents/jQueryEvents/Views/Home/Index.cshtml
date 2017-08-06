@@ -8,7 +8,7 @@
         input[type=text] { background-color:#efefef;}
         .BlueDiv { background-color: Navy; color:White;width:200px;}
         .RedDiv { background-color: Red; color:White; width:200px;}
-        .Highlight { background-color:Yellow;}
+        input.Highlight , .Highlight { background-color: Yellow;}
         .LightHighlight { background-color: #ccc;}
         .PhoneHighlight { background-color:#ccc;}
         .PhoneNumber { margin-top:5px;width:80px;}
@@ -23,15 +23,10 @@
         });
 
         function WireEvents() {
-            $('#SubmitButton').click(function() {
-                var firstName = $('#FirstNameTextBox').val();
-                var lastName = $('#LastNameTextBox').val();
-                $('#DivOutput').text(firstName + " " + lastName);
-            });
-
             //Handle select 
             $(".MyInput").change(function() {
-                alert($(this).val());
+              
+                $(this).addClass('Highlight');
             });
         }
     </script>
