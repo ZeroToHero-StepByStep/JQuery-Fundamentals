@@ -24,13 +24,18 @@
 
         function WireEvents() {
             $('#MyDiv').mouseenter(function() {
-                $(this).toggleClass('Highlight');
+                Toggle(this);
                 //change the cursor
                 $(this).css('cursor', 'pointer');
             }).mouseleave(function() {
-                $(this).toggleClass('Highlight');
+                Toggle(this);
             });
 
+
+            function Toggle(div) {
+                $(div).toggleClass('Highlight');
+                
+            }
 
         }
     </script>
