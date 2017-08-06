@@ -23,16 +23,9 @@
         });
 
         function WireEvents() {
-            $('#MyTable tr').hover(
-                function() {
-                    //mouseenter
-                    $(this).css('background-color', 'blue');
-                },
-                function() {
-                    //mouseleave
-                    $(this).css('background-color','white')
-                }
-            );
+            $("#MyTable tr").hover(function() {
+                $(this).toggleClass('LightHighlight');
+            });
 
         }
     </script>
