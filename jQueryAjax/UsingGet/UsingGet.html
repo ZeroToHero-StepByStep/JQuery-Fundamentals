@@ -5,11 +5,18 @@
     <script src="../Scripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $.get('../HelpDetails.html',
-                function(data) {
-                    $('#OutputDiv').html(data);
-                        
-                });
+            $('#MyButton').click(function() {
+                $.get('../HelpDetails.html',
+                    function (data) {
+                        $('#OutputDiv').html(data);
+
+                    });
+
+                $.get('../CustomerJson.aspx', { id: 5 },
+                    function (data) {
+                        alert('ID: ' + data.ID + ' FirstName: ' +data.FirstName );
+                    }, 'json');
+            });
         });
     </script>
 </head>
