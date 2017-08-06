@@ -23,11 +23,15 @@
         });
 
         function WireEvents() {
-            //Handle select 
-            $(".MyInput").change(function() {
-              
-                $(this).addClass('Highlight');
+            $('#MyDiv').mouseenter(function() {
+                $(this).toggleClass('Highlight');
+                //change the cursor
+                $(this).css('cursor', 'pointer');
+            }).mouseleave(function() {
+                $(this).toggleClass('Highlight');
             });
+
+
         }
     </script>
 </head>
